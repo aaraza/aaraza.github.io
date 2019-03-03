@@ -185,7 +185,7 @@ span.answer {
   border-color: #86BE91;
 }
 
-#resume {
+#education {
   background-color: #c8d04c;
   color: white;
   height: auto;
@@ -195,8 +195,8 @@ span.answer {
   -webkit-font-smoothing: antialiased;
 }
 
-#resume .inner {
-  width:40%;
+#education .inner {
+  width:55%;
 }
 
 #exp {
@@ -211,7 +211,7 @@ span.answer {
 }
 
 #exp .inner {
-  width:40%;
+  width:55%;
 }
 
 img.icon {
@@ -445,11 +445,11 @@ ul.toc {
     max-height:100%;
   }
 
-  #resume .inner {
+  #education .inner {
     width: 85%;
   }
 
-  #resume .right {
+  #education .right {
     display: none;
   }
 
