@@ -5,13 +5,14 @@ h1, h2, h3 {
 
 
 body {
-  margin: 0;
-  font-size: 20px;
-  font-family: 'Karla', sans-serif;
-  line-height: 20px;
-  color: #333333;
-  background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
+  background-color: #ffffff;
+  color: #333333;
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 a {
@@ -33,17 +34,15 @@ a img {
 }
 
 #header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-align: center;
-  width: 100%;
   background-color: #fafafa;
-  line-height: 100px;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
+  left: 0;
+  letter-spacing: 0.2em;
+  line-height: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
   z-index: 1000;
 }
 
@@ -53,12 +52,12 @@ a img {
 
 .name {z-index: 88888;}
 
-#illustration {
-  background-image: url('https://picsum.photos/2048/1024/?image=842');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+#introduction {
+  align-items: center;
+  background-color: #b3d7ff;
   color: #333;
+  display: flex;
+  height: 100vh;
 }
 
 .icon {
