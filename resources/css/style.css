@@ -181,10 +181,9 @@ span.answer {
 }
 
 #resume {
-  background-color: #1a3139;
+  background-color: #c8d04c;
   color: white;
   height: auto;
-  margin-top: -30px;
   padding-top: 60px;
   font-size: 19px;
   line-height: 34px;
@@ -196,9 +195,8 @@ span.answer {
 }
 
 #exp {
-  background-color: #C26868;
+  background-color: #b5c4d8;
   height: auto;
-  margin-top: -30px;
   padding-top: 60px;
   font-size: 19px;
   line-height: 34px;
