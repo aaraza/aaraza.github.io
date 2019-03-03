@@ -17,7 +17,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #333;
+  color: white;
 }
 
 a img {
@@ -34,7 +34,7 @@ a img {
 }
 
 #header {
-  background-color: #fafafa;
+  background-color:rgba(0,0,0,.9);
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   left: 0;
@@ -54,10 +54,14 @@ a img {
 
 #introduction {
   align-items: center;
-  background-color: #b3d7ff;
+  background-color white;
   color: #333;
   display: flex;
   height: 100vh;
+}
+
+#introduction .inner {
+  width:35%;
 }
 
 .icon {
@@ -68,7 +72,7 @@ a img {
 
 #illustration h1 {
   font-family: 'Montserrat', sans-serif;
-  color: #333;
+  color: white;
   padding-top: 200px;
   text-align: center;
 }
@@ -158,7 +162,9 @@ span.answer {
 }
 
 .skill {
+  background-color: white;
   border: 1px solid #50a9d1;
+  color:black;
   margin-right: 10px;
   text-transform: uppercase;
   font-weight: 500;
@@ -190,21 +196,22 @@ span.answer {
 }
 
 #resume .inner {
-  width:700px;
+  width:40%;
 }
 
 #exp {
-  background-color: #b5c4d8;
-  height: auto;
-  padding-top: 60px;
-  font-size: 19px;
-  line-height: 34px;
   -webkit-font-smoothing: antialiased;
+  background-color: #b5c4d8;
   color: white;
+  font-size: 19px;
+  height: auto;
+  line-height: 34px;
+  padding-bottom: 2%;
+  padding-top: 2%;
 }
 
 #exp .inner {
-  width:700px;
+  width:40%;
 }
 
 img.icon {

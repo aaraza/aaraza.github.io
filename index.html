@@ -25,7 +25,7 @@
 <div id="header" class="row">
 
   <div class="inner name">
-    <a href="#illustration">Ali Raza</a>
+    <a href="#introduction">Ali Raza</a>
   </div>
 
   <div class="nav">
@@ -39,7 +39,8 @@
 </div>
       
 <div id="introduction" class="row justify-content-center align-self-center">
-  <div class="col-md-5">
+  <!-- <div class="col-md-5"> -->
+  <div class="inner">
     <p>Hi, my name is Ali!</p>
 
     <p>As a software engineer, I strive to use my technical knowledge to create innovative solutions and useful products that make the world a better place.</p>
@@ -60,9 +61,9 @@
     <!--<a class="btn btn-danger btn-lg" href="#">Read my blog <i class="fa fa-arrow-circle-o-right"></i> </a> -->
   </div>
 
-  <div class="col-md-4"><br>
+  <!-- <div class="col-md-4"><br>
     <a><img src="https://avatars2.githubusercontent.com/u/18385989?s=400&v=4" class="img-responsive"></a>
-  </div>
+  </div> -->
 
 </div>
 
@@ -71,46 +72,50 @@
   <p class="tagline">Professional Experience</p>
   <!-- Résumé : Work Experience : Cerner -->
   <p>
-    <a target="_blank" href="http://www.cerner.com/"><img class="icon" src="./resources/images/cerner.png"></a><b>Cerner</b>
-    <span class="right"><i>Jan 2018 - Present</i></span><br>
-    <b>Software Engineer</b>
+    <a target="_blank" href="http://www.cerner.com/"><img class="icon" src="./resources/images/cerner.png"></a><b>Cerner Corporation</b>
+    <span class="right"><i>Jan 2018 - Feb 2019</i></span><br>
+    Software Engineer
     <span class="right"><i>Kansas City, MO</i></span><br><br>
   </p>
 
-    I worked on HealtheIntent, a system that takes data from a variety of sources across the health care continum and creates health records for individual members of the population.
-    <ul style="list-style:circle;">
-      <li>Creating MapReduce pipelines using Java for batch big data processing of massive medical datasets</li>
-      <li>Creating automated Oozie workflows that execute MapReduce pipelines at regularly scheduled intervals ensuring new data is constantly processed</li>
-      <li>Working with Clara Rules, an expert system built in Clojure -- used for medical rules processing and producing performance metrics for care providers</li>
-      <li>Improving workflow automation via ruby/python scripts</li>
-      <li>Improving continuous integration/continuous delivery system by through Jenkins, Spinnaker, Chef</li>
+  <p>Cerner is a global healthcare software provider. You've probably never heard of Cerner, but there is a good chance you are in a Cerner system somewhere as their solutions
+    are widely used throughout the medical industry.
+  </p>
+
+  <p>
+    At Cerner I worked on a solution called HealtheIntent that creates medical records by combining data from a different of sources and then builds individualized
+    care plans for patitents.
+  </p>
+
+  <p>Here were some of my more technical responsibilities and accomplishments:
+
+    <ul>
+      <li>Built MapReduce pipelines (Java) for batch ETL processing on medical datasets</li>
+      <li>Used big data tools such as Oozie, Avro, Hive, MapReduce/HDFS to create a system that efficiently processed millions of medical records daily</li>
+      <li>Wrote web services/scripts that interacted with data stored in HDFS (Ruby)</li>
+      <li>Improved Continious Integration/Continious Delivery and deployment infrastructure via Chef cookbooks and Jenkins/Spinnaker jobs</li>
+      <li>Performed rotational support such as oncall operational support or release manager</li>
+      <li>Worked in an agile software development environment with scrum, code reviews, spring planning and retrospectives, etc...</li>
     </ul>
+
+    <span class="skill">System Design</span>
+    <span class="skill">MapReduce/Hadoop</span>
     <span class="skill">Java</span>
     <span class="skill">Ruby</span>
-    <span class="skill">MapReduce</span>
-    <span class="skill">Spinnaker</span>
-    <span class="skill">Jenkins</span>
-    <span class="skill">Software Engineering</span>
-  <p></p>
-  <br>
-  <hr>
-  <!-- Résumé : Work Experience : Internship -->
-  <p>
-    <a target="_blank" href="http://www.cerner.com/"><img class="icon" src="./resources/images/cerner.png"></a><b>Cerner</b><br>
-    <b>Software Intern</b>
-    <span class="right"><i>Summer 2017</i></span><br>
+    <span class="skill">Spinnaker/Jenkins</span>
   </p>
+
+  <hr>
+
+  <b>Software Intern</b>
+  <span class="right"><i>Summer 2017</i></span><br>
   <ul style="list-style:circle;">
-    <li>Created MapReduce pipeline that filtered medical datasets down to an individual patient allowing technical support to answer client questions without contacting engineers</li>
-    <li>Designed web application that retrieved, de-serialized, and displayed distributed Avro records without having to perform any Hive queries</li>
+    <li>Created a MapReduce pipeline that filtered medical datasets down to an individual record and then transformed the record to a condensed model</li>
+    <li>Designed a web application that displayed the condensed patient record in a intuitive UI</li>
   </ul>
   <span class="skill">Java</span>
-  <span class="skill">Apache Crunch</span>
-  <span class="skill">Apache Avro</span>
   <span class="skill">JavaScript</span>
-  <span class="skill">Agile Methadology</span>
-  <p></p>
-  <br>
+  <span class="skill">Unix/Git</span>
 </div>
 </div>
 
