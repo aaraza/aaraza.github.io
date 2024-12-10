@@ -1,0 +1,21 @@
+baseURL: "https://example.org/"
+languageCode: "en-us"
+theme: "hyde"
+title: "Ali's Blog"
+
+Menus:
+  main:
+    - Name: "Posts"
+      URL: "/posts/"
+    - Name: "Github"
+      URL: "https://github.com/aaraza/"
+    - Name: "LinkedIn"
+      URL: "https://www.linkedin.com/in/ali-raza-/"
+
+params:
+  description: "Ruminations of a software engineer"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true  # Allows raw HTML in Markdown
