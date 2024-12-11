@@ -5,6 +5,8 @@ title: "Ali Raza"
 
 Menus:
   main:
+    - Name: "About"
+      URL: "/about/"
     - Name: "Blogs"
       URL: "/posts/"
     - Name: "Github"
@@ -13,7 +15,7 @@ Menus:
       URL: "https://www.linkedin.com/in/ali-raza-/"
 
 params:
-  description: "Ruminations of a software engineer"
+  description: " "
 
 markup:
   goldmark:
