@@ -1,11 +1,11 @@
 baseURL: "https://example.org/"
 languageCode: "en-us"
 theme: "hyde"
-title: "Ali's Blog"
+title: "Ali Raza"
 
 Menus:
   main:
-    - Name: "Posts"
+    - Name: "Blogs"
       URL: "/posts/"
     - Name: "Github"
       URL: "https://github.com/aaraza/"
