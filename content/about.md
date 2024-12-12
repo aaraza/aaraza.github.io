@@ -1,11 +1,11 @@
 +++
 date = '2024-12-11T03:14:22-06:00'
-draft = true
+draft = false
 title = "Hi, I'm Ali!"
 type = "about"
 +++
 
-I've been fascinated with computers since childhood which led me to pursuing a computer science degree at the University of Missouri. This tuned out to be a great decision as I quickly became enamored with subjects like algorithms, computer architecture, and operating systems - topics I plan on exploring in future blog posts.
+I've been fascinated with computers forever and that led me to pursuing a computer science degree at the University of Missouri. This turned out to be a great decision as I quickly became enamored with subjects like algorithms, computer architecture, and operating systems - topics I plan on exploring in future blog posts.
 
 I graduated in 2017 and have been working as a backend software engineer on a variety of interesting projects. These include building machine learning models for user authentication services with over 20 million daily average users and developing ETL pipelines to efficiently process massive medical datasets, helping provide proactive healthcare to entire communities. 
 
