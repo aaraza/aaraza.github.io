@@ -1,17 +1,17 @@
 +++
-date = '2024-12-11T03:14:22-06:00'
+date = '2024-12-13T02:15:00-06:00'
 draft = false
 title = "Hi, I'm Ali!"
 type = "about"
 +++
 
-I've been fascinated with computers forever and that led me to pursuing a computer science degree at the University of Missouri. This turned out to be a great decision as I quickly became enamored with subjects like algorithms, computer architecture, and operating systems - topics I plan on exploring in future blog posts.
+Hello, my name is Ali. I'm a software engineer based out of Seattle. 
 
-I graduated in 2017 and have been working as a backend software engineer on a variety of interesting projects. These include building machine learning models for user authentication services with over 20 million daily average users and developing ETL pipelines to efficiently process massive medical datasets, helping provide proactive healthcare to entire communities. 
+I've worked on many interesting projects such as building machine learning models for user authentication services with over 20 million daily average users and developing ETL pipelines to efficiently process massive medical datasets, helping provide proactive healthcare to entire communities.
 
-Lately, I've been focusing on application architecture, specifically, decomposing monolithic applications into containerized micro-apps deployed in the cloud.
+I'm interested in core computer science topics such as algorithm design, operating systems, computer architecture, and machine learning, as well as software engineering concepts such as distributed systems, containerization, SDLC, and leading engineering teams.
 
-I have experience as an individual contributor and as a team lead, having built engineering teams from the ground up. I'm passionate about solving challenging problems and am always looking for opportunities that can leverage my skills to do so. If you are working on something and believe I could help, please reach out to me.
+From time to time I'll also write about outside interests such as finance, history, international relations, literature, and film.
 
 <a href="/Ali_Raza_Resume_10_29_2024.pdf" target="_blank"><span class="icon typcn typcn-document-text"></span></a>
 <a href="https://www.github.com/aaraza/"><span class="icon typcn typcn-social-github"></span></a>
