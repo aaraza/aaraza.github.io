@@ -16,5 +16,5 @@ From time to time I'll also write about outside interests such as finance, histo
 <a href="/Ali_Raza_Resume_10_29_2024.pdf" target="_blank"><span class="icon typcn typcn-document-text"></span></a>
 <a href="https://www.github.com/aaraza/"><span class="icon typcn typcn-social-github"></span></a>
 <a href="https://www.linkedin.com/in/ali-raza-/"><span class="icon typcn typcn-social-linkedin"></span></a>
-<a href="https://stackoverflow.com/users/8122970/ali-raza"><span class="icon typcn bi-stack-overflow"></span></a>
+<a href="https://stackoverflow.com/users/8122970/ali-raza"><span class="bootstrap-icon bi-stack-overflow"></span></a>
 <a href="mailto:aaraza1995@gmail.com"><span class="icon typcn typcn-mail"></span></a>
