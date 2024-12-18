@@ -253,6 +253,11 @@ a.sidebar-nav-item:focus {
   font-size: 2.5em; 
 }
 
+.bootstrap-icon {
+  color: #2c3e50;
+  font-size: 2.0em;
+}
+
 .rounded {
   border:0px solid;
   border-radius: 50%;
