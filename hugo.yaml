@@ -5,8 +5,6 @@ title: "Ali Raza"
 
 Menus:
   main:
-    - Name: "About"
-      URL: "/about/"
     # - Name: "Blogs"
     #   URL: "/posts/"
     - Name: "Github"
