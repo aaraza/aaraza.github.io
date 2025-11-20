@@ -1,21 +1,8 @@
 <aside class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <!-- <a href="{{ .Site.BaseURL }}"><h1>{{ .Site.Title }}</h1></a> -->
-      <p class="lead">
-      {{ with .Site.Params.description }} {{.}} {{ else }}An elegant open source and mobile first theme for <a href="https://hugo.spf13.com">hugo</a> made by <a href="https://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.{{end}}
-      </p>
       <a href="{{ "/" | absURL }}"><img src="/Avatar.png" alt="Personal Headshot"></a>
     </div>
-
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="{{ .Site.BaseURL }}">Home</a> </li>
-        {{ range .Site.Menus.main -}}
-          <li><a href="{{.URL}}"> {{ .Name }} </a></li>
-        {{- end }}
-      </ul>
-    </nav>
 
   </div>
 </aside>

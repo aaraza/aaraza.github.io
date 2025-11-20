@@ -12,9 +12,6 @@ Menus:
     - Name: "LinkedIn"
       URL: "https://www.linkedin.com/in/ali-raza-/"
 
-params:
-  description: " "
-
 markup:
   goldmark:
     renderer:
