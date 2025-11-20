@@ -2,6 +2,6 @@
 &lt;li&gt;&lt;a href="https://teachyourselfcs.com"&gt;Teach Yourself CS&lt;/a&gt;: Especially the computer architecture course based on &lt;em&gt;Computer Systems: A Programmer&amp;rsquo;s Perspective&lt;/em&gt; - learn how software &amp;amp; hardware interact during a program&amp;rsquo;s execution.&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf"&gt;A Relational Model of Data for Large Shared Data Banks&lt;/a&gt;: Edgar F. Codd creates the relational model for data storage, using mathematical logic and set theory to ensure data integrity. Led to SQL and essentially all modern RDBMSs.&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.vldb.org/conf/1994/P487.PDF"&gt;Fast Algorithms for Mining Association Rules&lt;/a&gt;: Seminal research on how to discover associations between transactions in massive datasets.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://pages.cs.wisc.edu/~akella/CS838/F15/838-CloudPapers/hdfs.pdf"&gt;The Hadoop Distributed File System&lt;/a&gt;: Storing massive datasets on distributed clusterts.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pages.cs.wisc.edu/~akella/CS838/F15/838-CloudPapers/hdfs.pdf"&gt;The Hadoop Distributed File System&lt;/a&gt;: Storing massive datasets on distributed clusters.&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf"&gt;Resilient Distributed Datasets&lt;/a&gt;: The core distributed computing abstraction used in Apache Spark.&lt;/li&gt;
 &lt;/ul&gt;</description></item></channel></rss>
