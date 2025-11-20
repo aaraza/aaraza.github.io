@@ -2,9 +2,7 @@
   <div class="posts">
     {{ with .Site.GetPage "/about.md" -}}
       <article class="post">
-        <h1 class="post-title">
-          {{ .Title }}
-        </h1>
+        <h2>{{ .Title }}</h2>
         {{ .Content }}
       </article>
     {{- end }}
