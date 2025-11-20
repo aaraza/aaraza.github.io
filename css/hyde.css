@@ -32,7 +32,7 @@
  */
 
 html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: Menlo, Monaco, 'Courier New', monospace;
 }
 @media (min-width: 48em) {
   html {
@@ -121,8 +121,9 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    4rem;
+  padding-top:    3rem;
   padding-bottom: 4rem;
+  font-size: 16px;
 }
 
 @media (min-width: 48em) {
