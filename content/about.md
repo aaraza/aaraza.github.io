@@ -8,7 +8,7 @@ type = "about"
 <!-- original date = '2024-12-13T02:15:00-06:00' -->
 
 I'm interested in:
-- CS & Software Engineering
+- [Computer Science / Software Engineering]({{< relref "posts/cs/_index.md" >}})
 - Finance
 - Films
 - Music
