@@ -9,6 +9,4 @@ type = "about"
 
 I'm interested in:
 - [Computer Science / Software Engineering]({{< relref "posts/cs/_index.md" >}})
-- Finance
-- Films
-- Music
+- [Films and Shows]({{< relref "posts/cinema/_index.md" >}})
