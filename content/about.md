@@ -8,5 +8,5 @@ type = "about"
 <!-- original date = '2024-12-13T02:15:00-06:00' -->
 
 I'm interested in:
-- [Computer Science / Software Engineering]({{< relref "posts/cs/_index.md" >}})
+- [Computer Science]({{< relref "posts/cs/_index.md" >}})
 - [Films and Shows]({{< relref "posts/cinema/_index.md" >}})
