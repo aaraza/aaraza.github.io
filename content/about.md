@@ -10,3 +10,4 @@ type = "about"
 I'm interested in:
 - [Computer Science]({{< relref "posts/cs/_index.md" >}})
 - [Films and Shows]({{< relref "posts/cinema/_index.md" >}})
+- [Boxing]({{< relref "posts/boxing/_index.md" >}})
