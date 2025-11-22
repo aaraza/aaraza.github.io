@@ -48,8 +48,6 @@ body {
 }
 
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
   line-height: 1.5;
 }
 @media (min-width: 38em) {
@@ -58,9 +56,23 @@ html {
   }
 }
 
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --link: #0066cc;
+}
+
+/* system dark preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0b0c;
+    --text: #e6e6e6;
+    --link: #7aa2ff;
+  }
+}
 body {
-  color: #000000;
-  background-color: #ffffff;
+  background-color: var(--bg);
+  color: var(--text);
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
           text-size-adjust: 100%;
@@ -68,7 +80,7 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #227bb9;
+  color: var(--link); 
   text-decoration: none;
 }
 /* `:focus` is linked to `:hover` for basic accessibility */
