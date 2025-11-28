@@ -6,3 +6,5 @@
 ## Resources
 - [Hugo Documentation](https://gohugo.io/documentation/)
 - [Hyde Theme](https://github.com/spf13/hyde)
+- https://github.com/poole/hyde
+- https://github.com/poole/poole
