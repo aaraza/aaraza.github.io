@@ -30,6 +30,8 @@ Starting from Super Featherweight (130lbs) and going all the way up to light mid
 
 Amongst idiots, he has a reputation for being a runner, and for not finishing fights. Its important to remember that he ultra conservitive with his punches only after he had repeaeted issues with his hands breaking due to punches. Its quite incredible to adjust to such a debilitating issue in a manner that somehow makes you better. Its no short feat to stand infront of someone like Canelo all night long and beat him to a pulp while he can't touch you. Certainly, there's more beauty in that than watching Wilder smash a can. 
 
-### Greatest Hits
+<div style="text-align:center;">
+<h2>Greatest Hits</h2>
+</div>
 
 {{< carousel >}}
