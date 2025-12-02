@@ -1,7 +1,5 @@
-{{ $slides := or .Page.Params.carousel .Page.Params.fights }}
-{{ if not $slides }}
-<p class="carousel__empty">Add slides to `.Params.carousel` (or `.Params.fights`) to render this carousel.</p>
-{{ else }}
+{{ $slides := .Page.Params.carousel }}
+{{ if $slides }}
 <div class="carousel" data-carousel role="region" aria-label="Content carousel" tabindex="0">
   <div class="carousel__viewport">
     {{ range $index, $slide := $slides }}
@@ -11,13 +9,12 @@
           <img src="https://i.ytimg.com/vi/{{ $slide.videoId }}/hqdefault.jpg" alt="Thumbnail for {{ $slide.title }}" loading="lazy">
           <button type="button" class="carousel-card__play" data-play-video aria-label="Play {{ $slide.title }}">
             <i class="bi bi-play-fill" aria-hidden="true"></i>
-            <span>Play video</span>
+            <span>Play</span>
           </button>
         </div>
         <div class="carousel-card__player" data-player></div>
       </div>
       <div class="carousel-card__body">
-        <p class="carousel-card__eyebrow">Slide {{ add $index 1 }}</p>
         <h3 class="carousel-card__title">{{ $slide.title }}</h3>
         <p class="carousel-card__description">{{ $slide.description }}</p>
       </div>
@@ -28,7 +25,7 @@
   <div class="carousel__controls" aria-label="Carousel navigation">
     <button type="button" class="carousel__nav carousel__nav--prev" data-carousel-prev aria-label="Previous slide">
       <i class="bi bi-arrow-left-short" aria-hidden="true"></i>
-      <span>Prev</span>
+      <span>Previous</span>
     </button>
     <div class="carousel__dots" role="tablist" aria-label="Choose a slide">
       {{ range $index, $slide := $slides }}

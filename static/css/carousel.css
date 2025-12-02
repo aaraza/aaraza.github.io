@@ -126,15 +126,7 @@
 .carousel-card__body {
   display: grid;
   gap: 0.4rem;
-  align-content: center;
-}
-
-.carousel-card__eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.75rem;
-  color: var(--fc-muted);
-  margin: 0;
+  align-content: end;
 }
 
 .carousel-card__title {
