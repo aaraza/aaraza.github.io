@@ -1,4 +1,4 @@
-.fight-carousel {
+.carousel {
   --fc-bg: #0e1729;
   --fc-panel: rgba(255, 255, 255, 0.06);
   --fc-border: rgba(255, 255, 255, 0.14);
@@ -17,11 +17,11 @@
   box-shadow: 0 22px 44px -28px rgba(0, 0, 0, 0.75);
 }
 
-.fight-carousel__viewport {
+.carousel__viewport {
   position: relative;
 }
 
-.fight-card {
+.carousel-card {
   display: none;
   gap: 1.5rem;
   align-items: stretch;
@@ -31,24 +31,24 @@
   border: 1px solid var(--fc-border);
 }
 
-.fight-card.is-active {
+.carousel-card.is-active {
   display: grid;
 }
 
 @media (min-width: 860px) {
-  .fight-card {
+  .carousel-card {
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   }
 }
 
-.fight-card__visual {
+.carousel-card__visual {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.fight-card__thumb,
-.fight-card__player {
+.carousel-card__thumb,
+.carousel-card__player {
   position: relative;
   width: 100%;
   border-radius: 12px;
@@ -58,7 +58,7 @@
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
-.fight-card__thumb img {
+.carousel-card__thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -67,12 +67,12 @@
   transition: transform 160ms ease, filter 160ms ease;
 }
 
-.fight-card__thumb:hover img {
+.carousel-card__thumb:hover img {
   transform: scale(1.01);
   filter: saturate(1.05);
 }
 
-.fight-card__play {
+.carousel-card__play {
   position: absolute;
   inset: 0;
   margin: auto;
@@ -93,43 +93,43 @@
   backdrop-filter: blur(6px);
 }
 
-.fight-card__play:hover,
-.fight-card__play:focus-visible {
+.carousel-card__play:hover,
+.carousel-card__play:focus-visible {
   border-color: var(--fc-accent);
   background: rgba(127, 208, 255, 0.16);
   transform: translateY(-2px);
   outline: none;
 }
 
-.fight-card__play i {
+.carousel-card__play i {
   font-size: 1.4rem;
 }
 
-.fight-card__player {
+.carousel-card__player {
   display: none;
 }
 
-.fight-card__player.is-visible {
+.carousel-card__player.is-visible {
   display: block;
 }
 
-.fight-card__player iframe {
+.carousel-card__player iframe {
   width: 100%;
   height: 100%;
   border: 0;
 }
 
-.fight-card__thumb.is-hidden {
+.carousel-card__thumb.is-hidden {
   display: none;
 }
 
-.fight-card__body {
+.carousel-card__body {
   display: grid;
   gap: 0.4rem;
   align-content: center;
 }
 
-.fight-card__eyebrow {
+.carousel-card__eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-size: 0.75rem;
@@ -137,18 +137,18 @@
   margin: 0;
 }
 
-.fight-card__title {
+.carousel-card__title {
   margin: 0;
   font-size: 1.6rem;
 }
 
-.fight-card__description {
+.carousel-card__description {
   margin: 0;
   color: var(--fc-muted);
   line-height: 1.6;
 }
 
-.fight-carousel__controls {
+.carousel__controls {
   margin-top: 1rem;
   display: flex;
   align-items: center;
@@ -156,7 +156,7 @@
   gap: 1rem;
 }
 
-.fight-carousel__nav {
+.carousel__nav {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
@@ -169,20 +169,20 @@
   transition: border-color 150ms ease, background 150ms ease;
 }
 
-.fight-carousel__nav:hover,
-.fight-carousel__nav:focus-visible {
+.carousel__nav:hover,
+.carousel__nav:focus-visible {
   border-color: var(--fc-accent);
   background: rgba(127, 208, 255, 0.12);
   outline: none;
 }
 
-.fight-carousel__dots {
+.carousel__dots {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.fight-carousel__dot {
+.carousel__dot {
   width: 11px;
   height: 11px;
   border-radius: 999px;
@@ -192,19 +192,19 @@
   transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
 }
 
-.fight-carousel__dot.is-active {
+.carousel__dot.is-active {
   background: var(--fc-accent);
   border-color: var(--fc-accent);
   transform: scale(1.12);
 }
 
-.fight-carousel__dot:hover,
-.fight-carousel__dot:focus-visible {
+.carousel__dot:hover,
+.carousel__dot:focus-visible {
   border-color: var(--fc-accent);
   outline: none;
 }
 
-.fight-carousel__empty {
+.carousel__empty {
   padding: 1rem;
   border-radius: 10px;
   background: rgba(255, 213, 128, 0.08);
@@ -212,33 +212,33 @@
 }
 
 @media (max-width: 720px) {
-  .fight-carousel {
+  .carousel {
     padding: 1.25rem;
   }
 
-  .fight-card {
+  .carousel-card {
     display: none;
   }
 
-  .fight-card.is-active {
+  .carousel-card.is-active {
     display: flex;
     flex-direction: column;
   }
 
-  .fight-card__title {
+  .carousel-card__title {
     font-size: 1.35rem;
   }
 
-  .fight-carousel__controls {
+  .carousel__controls {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .fight-carousel__dots {
+  .carousel__dots {
     justify-content: center;
   }
 
-  .fight-carousel__nav {
+  .carousel__nav {
     justify-content: center;
   }
 }

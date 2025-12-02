@@ -3,22 +3,22 @@ date = '2025-11-20T09:00:00-00:00'
 draft = false
 title = "Floyd Mayweather"
 
-[[fights]]
+[[carousel]]
 title = "vs. Chico Corrales"
 description = "He went up in weight to fight another undefeated champion who was a 2-1 favorite against him."
 videoId = "66Dg_n0H8rQ"
 
-[[fights]]
+[[carousel]]
 title = "vs. Arturo Gatti"
 description = "Watch Gatti's wars with Ward to see how Mayweather truly was levels above the rest."
 videoId = "THojnKPFpFA"
 
-[[fights]]
+[[carousel]]
 title = "vs. Miguel Cotto"
 description = "Stand and bang, ok."
 videoId = "fKiGQfpupRA"
 
-[[fights]]
+[[carousel]]
 title = "vs. Canelo Alvarez"
 description = "The master vs the student."
 videoId = "rFTFsM4yrvc"
@@ -32,4 +32,4 @@ Amongst idiots, he has a reputation for being a runner, and for not finishing fi
 
 ### Greatest Hits
 
-{{< fight-carousel >}}
+{{< carousel >}}

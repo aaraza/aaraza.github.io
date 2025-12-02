@@ -1,18 +1,19 @@
 (() => {
-  const carousels = document.querySelectorAll("[data-fight-carousel]");
+  const carousels = document.querySelectorAll("[data-carousel]");
   if (!carousels.length) return;
 
   carousels.forEach((carousel) => {
-    const slides = Array.from(carousel.querySelectorAll("[data-fight-slide]"));
+    const slides = Array.from(carousel.querySelectorAll("[data-carousel-slide]"));
     if (!slides.length) return;
 
-    const dots = Array.from(carousel.querySelectorAll("[data-fight-dot]"));
-    const prev = carousel.querySelector("[data-fight-prev]");
-    const next = carousel.querySelector("[data-fight-next]");
-    let currentIndex = slides.findIndex((slide) =>
-      slide.classList.contains("is-active")
+    const dots = Array.from(carousel.querySelectorAll("[data-carousel-dot]"));
+    const prev = carousel.querySelector("[data-carousel-prev]");
+    const next = carousel.querySelector("[data-carousel-next]");
+    let currentIndex = Math.max(
+      0,
+      slides.findIndex((slide) => slide.classList.contains("is-active"))
     );
-    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex === -1) currentIndex = 0;
 
     const applyState = () => {
       slides.forEach((slide, index) => {
@@ -47,17 +48,11 @@
       const videoId = wrapper.dataset.videoId;
       if (!videoId) return;
 
-      if (player.dataset.loaded === "true") {
-        thumb.classList.add("is-hidden");
-        player.classList.add("is-visible");
-        return;
-      }
-
       const iframe = document.createElement("iframe");
       iframe.src = `https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1`;
       iframe.title = wrapper.dataset.title
-        ? `${wrapper.dataset.title} replay`
-        : "Fight video";
+        ? `${wrapper.dataset.title} video`
+        : "Embedded video";
       iframe.width = "560";
       iframe.height = "315";
       iframe.loading = "lazy";
@@ -82,7 +77,7 @@
     next?.addEventListener("click", () => goTo(currentIndex + 1));
 
     dots.forEach((dot) => {
-      const index = Number.parseInt(dot.dataset.fightDot || "", 10);
+      const index = Number.parseInt(dot.dataset.carouselDot || "", 10);
       if (Number.isNaN(index)) return;
       dot.addEventListener("click", () => goTo(index));
     });
