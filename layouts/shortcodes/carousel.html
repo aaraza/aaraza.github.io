@@ -1,0 +1,41 @@
+{{ $slides := .Page.Params.carousel }}
+{{ if $slides }}
+<div class="carousel" data-carousel role="region" aria-label="Content carousel" tabindex="0">
+  <div class="carousel__viewport">
+    {{ range $index, $slide := $slides }}
+    <article class="carousel-card{{ if eq $index 0 }} is-active{{ end }}" data-carousel-slide aria-hidden="{{ if eq $index 0 }}false{{ else }}true{{ end }}">
+      <div class="carousel-card__visual" data-video-wrapper data-video-id="{{ $slide.videoId }}" data-title="{{ $slide.title }}">
+        <div class="carousel-card__thumb" data-thumb>
+          <img src="https://i.ytimg.com/vi/{{ $slide.videoId }}/hqdefault.jpg" alt="Thumbnail for {{ $slide.title }}" loading="lazy">
+          <button type="button" class="carousel-card__play" data-play-video aria-label="Play {{ $slide.title }}">
+            <i class="bi bi-play-fill" aria-hidden="true"></i>
+            <span>Play</span>
+          </button>
+        </div>
+        <div class="carousel-card__player" data-player></div>
+      </div>
+      <div class="carousel-card__body">
+        <h3 class="carousel-card__title">{{ $slide.title }}</h3>
+        <p class="carousel-card__description">{{ $slide.description }}</p>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+
+  <div class="carousel__controls" aria-label="Carousel navigation">
+    <button type="button" class="carousel__nav carousel__nav--prev" data-carousel-prev aria-label="Previous slide">
+      <i class="bi bi-arrow-left-short" aria-hidden="true"></i>
+      <span>Previous</span>
+    </button>
+    <div class="carousel__dots" role="tablist" aria-label="Choose a slide">
+      {{ range $index, $slide := $slides }}
+      <button type="button" class="carousel__dot{{ if eq $index 0 }} is-active{{ end }}" data-carousel-dot="{{ $index }}" aria-label="Go to {{ $slide.title }}"></button>
+      {{ end }}
+    </div>
+    <button type="button" class="carousel__nav carousel__nav--next" data-carousel-next aria-label="Next slide">
+      <span>Next</span>
+      <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>
+{{ end }}
