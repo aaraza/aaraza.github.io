@@ -1,16 +1,41 @@
 .carousel {
-  --fc-bg: #0e1729;
-  --fc-panel: rgba(255, 255, 255, 0.06);
-  --fc-border: rgba(255, 255, 255, 0.14);
-  --fc-accent: #7fd0ff;
-  --fc-text: #ffffff;
+  --fc-bg: var(--bg, #ffffff);
+  --fc-panel: #f6f7fa;
+  --fc-border: rgba(0, 0, 0, 0.08);
+  --fc-accent: var(--link, #0066cc);
+  --fc-text: var(--text, #111111);
+  --fc-soft: rgba(0, 0, 0, 0.04);
+  --fc-media-bg: #e5eaf1;
+  --fc-accent-soft: rgba(0, 102, 204, 0.12);
+  --fc-veil: rgba(0, 0, 0, 0.04);
+  --fc-shadow: 0 22px 44px -32px rgba(0, 0, 0, 0.35);
+  --fc-warning-bg: rgba(255, 213, 128, 0.16);
+  --fc-warning-border: rgba(255, 184, 63, 0.48);
   width: min(100%, 780px);
   margin: 2rem auto;
   padding: 1.5rem;
   border-radius: 18px;
   color: var(--fc-text);
+  background: var(--fc-bg);
   border: 1px solid var(--fc-border);
-  box-shadow: 0 22px 44px -28px rgba(0, 0, 0, 0.75);
+  box-shadow: var(--fc-shadow);
+}
+
+@media (prefers-color-scheme: dark) {
+  .carousel {
+    --fc-bg: #0e1729;
+    --fc-panel: rgba(255, 255, 255, 0.06);
+    --fc-border: rgba(255, 255, 255, 0.14);
+    --fc-accent: var(--link, #7aa2ff);
+    --fc-text: var(--text, #e6e6e6);
+    --fc-soft: rgba(255, 255, 255, 0.04);
+    --fc-media-bg: #050b12;
+    --fc-accent-soft: rgba(122, 162, 255, 0.16);
+    --fc-veil: rgba(14, 23, 41, 0.78);
+    --fc-shadow: 0 22px 44px -28px rgba(0, 0, 0, 0.75);
+    --fc-warning-bg: rgba(255, 213, 128, 0.08);
+    --fc-warning-border: rgba(255, 213, 128, 0.4);
+  }
 }
 
 .carousel__viewport {
@@ -50,8 +75,8 @@
   border-radius: 12px;
   overflow: hidden;
   aspect-ratio: 16 / 9;
-  background: #050b12;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  background: var(--fc-media-bg);
+  box-shadow: inset 0 0 0 1px var(--fc-border);
 }
 
 .carousel-card__thumb img {
@@ -80,7 +105,7 @@
   height: 3rem;
   border-radius: 999px;
   border: 1px solid var(--fc-border);
-  background: rgba(14, 23, 41, 0.78);
+  background: var(--fc-veil);
   color: var(--fc-text);
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -92,7 +117,7 @@
 .carousel-card__play:hover,
 .carousel-card__play:focus-visible {
   border-color: var(--fc-accent);
-  background: rgba(127, 208, 255, 0.16);
+  background: var(--fc-accent-soft);
   transform: translateY(-2px);
   outline: none;
 }
@@ -150,7 +175,7 @@
   padding: 0.65rem 0.9rem;
   border-radius: 12px;
   border: 1px solid var(--fc-border);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--fc-soft);
   color: var(--fc-text);
   cursor: pointer;
   transition: border-color 150ms ease, background 150ms ease;
@@ -159,7 +184,7 @@
 .carousel__nav:hover,
 .carousel__nav:focus-visible {
   border-color: var(--fc-accent);
-  background: rgba(127, 208, 255, 0.12);
+  background: var(--fc-accent-soft);
   outline: none;
 }
 
@@ -174,7 +199,7 @@
   height: 11px;
   border-radius: 999px;
   border: 1px solid var(--fc-border);
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--fc-soft);
   cursor: pointer;
   transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
 }
@@ -194,8 +219,8 @@
 .carousel__empty {
   padding: 1rem;
   border-radius: 10px;
-  background: rgba(255, 213, 128, 0.08);
-  border: 1px solid rgba(255, 213, 128, 0.4);
+  background: var(--fc-warning-bg);
+  border: 1px solid var(--fc-warning-border);
 }
 
 @media (max-width: 720px) {
