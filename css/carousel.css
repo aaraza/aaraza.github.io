@@ -23,7 +23,6 @@
 
 @media (prefers-color-scheme: dark) {
   .carousel {
-    --fc-bg: #0e1729;
     --fc-panel: rgba(255, 255, 255, 0.06);
     --fc-border: rgba(255, 255, 255, 0.14);
     --fc-accent: var(--link, #7aa2ff);
