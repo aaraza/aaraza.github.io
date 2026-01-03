@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ali Raza</title><link>https://www.aliraza.gg/</link><description>Recent content on Ali Raza</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 20 Nov 2025 09:00:00 +0000</lastBuildDate><atom:link href="https://www.aliraza.gg/index.xml" rel="self" type="application/rss+xml"/><item><title>Floyd Mayweather</title><link>https://www.aliraza.gg/posts/boxing/floyd/</link><pubDate>Thu, 20 Nov 2025 09:00:00 +0000</pubDate><guid>https://www.aliraza.gg/posts/boxing/floyd/</guid><description>&lt;p&gt;Starting as a super featherweight (130lbs) in back 1996 and going all the way up to light middle weight (154lbs) with his final fight in 2017, Mayweather retired a five division world champion with an undefeated record of 50-0. By all metrics, he is undeniably one of the greatest athletes in a sport that&amp;rsquo;s been around since 1867.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ali Raza</title><link>https://www.aliraza.gg/</link><description>Recent content on Ali Raza</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 02 Jan 2026 09:00:00 +0000</lastBuildDate><atom:link href="https://www.aliraza.gg/index.xml" rel="self" type="application/rss+xml"/><item><title>Retro Gaming on MacOS</title><link>https://www.aliraza.gg/posts/gaming/mac-emulation/</link><pubDate>Fri, 02 Jan 2026 09:00:00 +0000</pubDate><guid>https://www.aliraza.gg/posts/gaming/mac-emulation/</guid><description>&lt;h2 id="setup"&gt;Setup&lt;/h2&gt;
+&lt;h4 id="atari-2600-nes-snes-gameboy-n64-and-sega-genesis"&gt;Atari 2600, NES, SNES, Gameboy, N64, and Sega Genesis&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Download and install &lt;a href="https://openemu.org"&gt;OpenEmu&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Download a curated rom set. I used &lt;a href="https://archive.org/details/tiny-best-set-go"&gt;Tiny Best Set: Go!&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="ps2"&gt;PS2&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Download and install &lt;a href="https://pcsx2.net"&gt;PCSX2&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Download PS2 &lt;a href="https://emulation.gametechwiki.com/index.php/Emulator_files#PlayStation_2"&gt;bios&lt;/a&gt; and add it to PCSX2.&lt;/li&gt;
+&lt;li&gt;Download roms as needed. I get them from &lt;a href="https://romsfun.com/roms/playstation-2/"&gt;RomsFun.com&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You now have more gaming options on your Mac than any arcade ever. As a 90s kid who was mesmerized by endless cartridge walls in gaming shops, its incredible knowing I have all those options at the tip of my fingers.&lt;/p&gt;</description></item><item><title>Floyd Mayweather</title><link>https://www.aliraza.gg/posts/boxing/floyd/</link><pubDate>Thu, 20 Nov 2025 09:00:00 +0000</pubDate><guid>https://www.aliraza.gg/posts/boxing/floyd/</guid><description>&lt;p&gt;Starting as a super featherweight (130lbs) in back 1996 and going all the way up to light middle weight (154lbs) with his final fight in 2017, Mayweather retired a five division world champion with an undefeated record of 50-0. By all metrics, he is undeniably one of the greatest athletes in a sport that&amp;rsquo;s been around since 1867.&lt;/p&gt;
 &lt;div style="text-align:center;"&gt;
 &lt;h2&gt;Greatest Hits&lt;/h2&gt;
 &lt;/div&gt;
@@ -28,6 +40,7 @@
 &lt;li&gt;&lt;a href="https://www.aliraza.gg/posts/cs/"&gt;Computer Science&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.aliraza.gg/posts/cinema/"&gt;Films and Shows&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.aliraza.gg/posts/boxing/"&gt;Boxing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.aliraza.gg/posts/gaming/"&gt;Gaming&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>recommended</title><link>https://www.aliraza.gg/posts/cs/recommended/</link><pubDate>Wed, 19 Nov 2025 07:10:00 +0000</pubDate><guid>https://www.aliraza.gg/posts/cs/recommended/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://teachyourselfcs.com"&gt;Teach Yourself CS&lt;/a&gt;: I especially recommend the computer architecture course&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf"&gt;A Relational Model of Data for Large Shared Data Banks&lt;/a&gt;: Edgar F. Codd demonstrates formal logic and set theory can be used to ensure data integrity. This paper led to SQL and essentially all modern RDBMSs.&lt;/li&gt;

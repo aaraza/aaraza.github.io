@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gaming on Ali Raza</title><link>https://www.aliraza.gg/posts/gaming/</link><description>Recent content in Gaming on Ali Raza</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 02 Jan 2026 09:00:00 +0000</lastBuildDate><atom:link href="https://www.aliraza.gg/posts/gaming/index.xml" rel="self" type="application/rss+xml"/><item><title>Retro Gaming on MacOS</title><link>https://www.aliraza.gg/posts/gaming/mac-emulation/</link><pubDate>Fri, 02 Jan 2026 09:00:00 +0000</pubDate><guid>https://www.aliraza.gg/posts/gaming/mac-emulation/</guid><description>&lt;h2 id="setup"&gt;Setup&lt;/h2&gt;
+&lt;h4 id="atari-2600-nes-snes-gameboy-n64-and-sega-genesis"&gt;Atari 2600, NES, SNES, Gameboy, N64, and Sega Genesis&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Download and install &lt;a href="https://openemu.org"&gt;OpenEmu&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Download a curated rom set. I used &lt;a href="https://archive.org/details/tiny-best-set-go"&gt;Tiny Best Set: Go!&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="ps2"&gt;PS2&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Download and install &lt;a href="https://pcsx2.net"&gt;PCSX2&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Download PS2 &lt;a href="https://emulation.gametechwiki.com/index.php/Emulator_files#PlayStation_2"&gt;bios&lt;/a&gt; and add it to PCSX2.&lt;/li&gt;
+&lt;li&gt;Download roms as needed. I get them from &lt;a href="https://romsfun.com/roms/playstation-2/"&gt;RomsFun.com&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You now have more gaming options on your Mac than any arcade ever. As a 90s kid who was mesmerized by endless cartridge walls in gaming shops, its incredible knowing I have all those options at the tip of my fingers.&lt;/p&gt;</description></item></channel></rss>
