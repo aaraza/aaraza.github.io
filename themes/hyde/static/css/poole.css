@@ -121,6 +121,11 @@ p {
 strong {
   color: #303030;
 }
+@media (prefers-color-scheme: dark) {
+  strong {
+    color: #f0f0f0;
+  }
+}
 
 
 /* Lists */
@@ -168,6 +173,12 @@ code {
   background-color: #f9f9f9;
   border-radius: 3px;
 }
+@media (prefers-color-scheme: dark) {
+  code {
+    color: #e06c75;
+    background-color: #1e1e2e;
+  }
+}
 pre {
   display: block;
   margin-top: 0;
@@ -180,6 +191,12 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   background-color: #f9f9f9;
+}
+@media (prefers-color-scheme: dark) {
+  pre {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+  }
 }
 pre code {
   padding: 0;
