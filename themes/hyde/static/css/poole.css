@@ -70,6 +70,7 @@ html {
     --link: #7aa2ff;
   }
 }
+
 body {
   background-color: var(--bg);
   color: var(--text);
@@ -80,7 +81,7 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: var(--link); 
+  color: var(--link);
   text-decoration: none;
 }
 /* `:focus` is linked to `:hover` for basic accessibility */
@@ -160,6 +161,14 @@ abbr[title] {
   cursor: help;
   border-bottom: 1px dotted #e5e5e5;
 }
+@media (prefers-color-scheme: dark) {
+  abbr {
+    color: #bbb;
+  }
+  abbr[title] {
+    border-bottom-color: #555;
+  }
+}
 
 /* Code */
 code,
@@ -170,7 +179,7 @@ code {
   padding: .25em .5em;
   font-size: 85%;
   color: #b3555e;
-  background-color: #f9f9f9;
+  background-color: #e8e8e8;
   border-radius: 3px;
 }
 @media (prefers-color-scheme: dark) {
@@ -186,7 +195,6 @@ pre {
   padding: 1rem;
   font-size: .8rem;
   line-height: 1.4;
-  white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
@@ -222,6 +230,12 @@ blockquote {
 blockquote p:last-child {
   margin-bottom: 0;
 }
+@media (prefers-color-scheme: dark) {
+  blockquote {
+    color: #a0a0a0;
+    border-left-color: #444;
+  }
+}
 @media (min-width: 30em) {
   blockquote {
     padding-right: 5rem;
@@ -251,6 +265,19 @@ tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
+@media (prefers-color-scheme: dark) {
+  table {
+    border-color: #333;
+  }
+  td,
+  th {
+    border-color: #333;
+  }
+  tbody tr:nth-child(odd) td,
+  tbody tr:nth-child(odd) th {
+    background-color: #1a1a2e;
+  }
+}
 
 
 /*
@@ -260,7 +287,7 @@ tbody tr:nth-child(odd) th {
  */
 
 .lead {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 300;
 }
 
@@ -277,6 +304,12 @@ tbody tr:nth-child(odd) th {
   padding: 1rem;
   color: #717171;
   background-color: #f9f9f9;
+}
+@media (prefers-color-scheme: dark) {
+  .message {
+    color: #a0a0a0;
+    background-color: #1a1a2e;
+  }
 }
 
 
@@ -320,6 +353,17 @@ tbody tr:nth-child(odd) th {
   color: #c0c0c0;
   letter-spacing: 0;
 }
+@media (prefers-color-scheme: dark) {
+  .masthead-title {
+    color: #ccc;
+  }
+  .masthead-title a {
+    color: #ccc;
+  }
+  .masthead-title small {
+    color: #777;
+  }
+}
 
 
 /*
@@ -352,6 +396,11 @@ tbody tr:nth-child(odd) th {
   padding-bottom: 2rem;
   border-top: 1px solid #eee;
 }
+@media (prefers-color-scheme: dark) {
+  .related {
+    border-top-color: #333;
+  }
+}
 .related-posts {
   padding-left: 0;
   list-style: none;
@@ -364,7 +413,7 @@ tbody tr:nth-child(odd) th {
   color: #999;
 }
 .related-posts li a:hover {
-  color: #227bb9;
+  color: var(--link);
   text-decoration: none;
 }
 .related-posts li a:hover small {
@@ -383,7 +432,7 @@ tbody tr:nth-child(odd) th {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: Menlo, Monaco, "Courier New", monospace;
   color: #ccc;
   text-align: center;
 }
@@ -401,6 +450,14 @@ tbody tr:nth-child(odd) th {
 /* Only provide a hover state for linked pagination items */
 a.pagination-item:hover {
   background-color: #f5f5f5;
+}
+@media (prefers-color-scheme: dark) {
+  .pagination-item {
+    border-color: #333;
+  }
+  a.pagination-item:hover {
+    background-color: #1a1a2e;
+  }
 }
 
 @media (min-width: 30em) {
