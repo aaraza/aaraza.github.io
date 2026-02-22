@@ -16,6 +16,7 @@ html {
   text-align: center;
   padding: 4rem 1rem;
 }
+
 @media (min-width: 48em) {
   .sidebar {
     position: fixed;
@@ -26,33 +27,28 @@ html {
     text-align: left;
   }
 }
-/* About section */
-.sidebar-about h1 {
-  margin-top: 0;
-  font-size: 3.25rem;
-}
 
 /* Sidebar nav */
 .sidebar-nav {
   padding-left: 0;
   list-style: none;
 }
+
 .sidebar-nav-item {
   display: block;
 }
+
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline;
 }
+
 .sidebar-nav-item.active {
   font-weight: bold;
 }
 
 @media (min-width: 48em) {
   .sidebar-sticky {
-    right:  1rem;
-    bottom: 1rem;
-    left:   1rem;
     text-align: center;
   }
 }
