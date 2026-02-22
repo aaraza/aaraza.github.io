@@ -24,7 +24,7 @@ description = "The master vs the student."
 videoId = "rFTFsM4yrvc"
 +++
 
-Starting as a super featherweight (130lbs) in back 1996 and going all the way up to light middle weight (154lbs) with his final fight in 2017, Mayweather retired a five division world champion with an undefeated record of 50-0. By all metrics, he is undeniably one of the greatest athletes in a sport that's been around since 1867. 
+Starting as a super featherweight (130lbs) back in 1996 and going all the way up to light middleweight (154lbs) with his final fight in 2017, Mayweather retired a five division world champion with an undefeated record of 50-0. By all metrics, he is undeniably one of the greatest athletes in a sport that's been around since 1867. 
 
 <div style="text-align:center;">
 <h2>Greatest Hits</h2>

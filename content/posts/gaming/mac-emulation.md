@@ -17,7 +17,7 @@ title = "Retro Gaming on MacOS"
 
 ## Thoughts
 
-Windows is the de facto operating system for desktop and laptop computers. It's dominant market share, 70% globally, essentially necessitates that developers build for Windows. Apple's macOS is the most successful challenger - it's 15% market share (30% in the US) quadrupled in the 2010s. Apple successfully marketed Macs as the up-scale personal computing , and they became very popular amongst college students, creatives, and developers.
+Windows is the de facto operating system for desktop and laptop computers. Its dominant market share, 70% globally, essentially necessitates that developers build for Windows. Apple's macOS is the most successful challenger - its 15% market share (30% in the US) quadrupled in the 2010s. Apple successfully marketed Macs as the up-scale personal computing, and they became very popular amongst college students, creatives, and developers.
 
 While MacOS is inferior to Windows as a purpose-built gaming device, it's shocking how easy it is to transform a Mac into a retro-gaming powerhouse. As a child I was mesmerized by the endless cartridge walls in gaming stores in the 90s. Now I have all of those games at the tip of my fingers. 
 
