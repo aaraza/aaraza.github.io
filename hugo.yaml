@@ -3,6 +3,7 @@ baseURL: "https://www.aliraza.gg/"
 googleAnalytics: "G-XV4X054PPH"
 languageCode: "en-us"
 theme: "hyde"
+disableHugoGeneratorInject: true
 markup:
   goldmark:
     renderer:
