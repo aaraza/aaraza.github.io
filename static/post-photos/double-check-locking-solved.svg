@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 370" font-family="monospace" font-size="13">
+  <style>
+    text { fill: #111; }
+    .title { font-size: 16px; font-weight: bold; }
+    .label { font-size: 13px; font-weight: bold; }
+    .small { font-size: 11px; }
+    .time { font-size: 11px; fill: #666; }
+    .danger { fill: #c0392b; }
+    .warning { fill: #d68910; }
+    .success { fill: #1e8449; }
+    .bg { fill: #ffffff; }
+    .axis { stroke: #999; }
+    .axis-fill { fill: #999; }
+    .thread-a-bar { fill: #3a86c9; opacity: 0.2; }
+    .thread-a-stroke { stroke: #3a86c9; }
+    .thread-a { fill: #3a86c9; }
+    .thread-b-bar { fill: #9b59b6; opacity: 0.2; }
+    .thread-b-stroke { stroke: #9b59b6; }
+    .thread-b { fill: #9b59b6; }
+    .blocked-bar { fill: #e74c3c; opacity: 0.15; }
+    .blocked-stroke { stroke: #e74c3c; stroke-dasharray: 6,3; }
+    .blocked { fill: #c0392b; }
+    .safe-zone { fill: #1e8449; opacity: 0.08; }
+    .safe-zone-stroke { stroke: #1e8449; }
+
+    @media (prefers-color-scheme: dark) {
+      text { fill: #e8e6e3; }
+      .time { fill: #999; }
+      .danger { fill: #e74c3c; }
+      .warning { fill: #f39c12; }
+      .success { fill: #2ecc71; }
+      .bg { fill: #1a1a2e; }
+      .axis { stroke: #555; }
+      .axis-fill { fill: #555; }
+      .thread-a-bar { fill: #6cb4ee; opacity: 0.3; }
+      .thread-a-stroke { stroke: #6cb4ee; }
+      .thread-a { fill: #6cb4ee; }
+      .thread-b-bar { fill: #c792ea; opacity: 0.3; }
+      .thread-b-stroke { stroke: #c792ea; }
+      .thread-b { fill: #c792ea; }
+      .blocked-bar { fill: #e74c3c; opacity: 0.15; }
+      .blocked-stroke { stroke: #e74c3c; stroke-dasharray: 6,3; }
+      .blocked { fill: #e74c3c; }
+      .safe-zone { fill: #2ecc71; opacity: 0.08; }
+      .safe-zone-stroke { stroke: #2ecc71; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="820" height="370" rx="8" class="bg"/>
+
+  <!-- Title -->
+  <text x="410" y="32" text-anchor="middle" class="title">Double-Checked Locking Timeline</text>
+
+  <!-- Time axis -->
+  <line x1="140" y1="320" x2="780" y2="320" class="axis" stroke-width="1.5"/>
+  <text x="140" y="345" text-anchor="middle" class="time">0ms</text>
+  <text x="268" y="345" text-anchor="middle" class="time">50ms</text>
+  <text x="652" y="345" text-anchor="middle" class="time">250ms</text>
+  <text x="716" y="345" text-anchor="middle" class="time">275ms</text>
+  <!-- Tick marks -->
+  <line x1="140" y1="316" x2="140" y2="324" class="axis" stroke-width="1.5"/>
+  <line x1="268" y1="316" x2="268" y2="324" class="axis" stroke-width="1.5"/>
+  <line x1="652" y1="316" x2="652" y2="324" class="axis" stroke-width="1.5"/>
+  <line x1="716" y1="316" x2="716" y2="324" class="axis" stroke-width="1.5"/>
+  <!-- Arrow head -->
+  <polygon points="780,320 772,316 772,324" class="axis-fill"/>
+
+  <!-- Thread A -->
+  <text x="30" y="105" class="label thread-a">Thread A</text>
+
+  <!-- Thread A: getInstance() at 0ms -->
+  <circle cx="140" cy="100" r="5" class="thread-a"/>
+  <text x="140" y="80" text-anchor="middle" class="small thread-a">getInstance()</text>
+
+  <!-- Thread A: synchronized block from 0ms to 250ms -->
+  <rect x="140" y="90" width="512" height="20" rx="4" class="thread-a-bar"/>
+  <rect x="140" y="90" width="512" height="20" rx="4" class="thread-a-stroke" stroke-width="1.5" fill="none"/>
+  <text x="396" y="104" text-anchor="middle" class="small thread-a">synchronized — lock held (250ms)</text>
+
+  <!-- Thread A: instance created at 250ms -->
+  <circle cx="652" cy="100" r="5" class="success"/>
+  <text x="652" y="135" text-anchor="middle" class="small success">instance = new Utility()</text>
+
+  <!-- Thread A: modifies utilityMap at 275ms — safe! -->
+  <circle cx="716" cy="100" r="5" class="success"/>
+  <text x="716" y="80" text-anchor="middle" class="small success">utilityMap.put()</text>
+
+  <!-- Thread B -->
+  <text x="30" y="215" class="label thread-b">Thread B</text>
+
+  <!-- Thread B: getInstance() at 50ms -->
+  <circle cx="268" cy="210" r="5" class="thread-b"/>
+  <text x="268" y="190" text-anchor="middle" class="small thread-b">getInstance()</text>
+
+  <!-- Thread B: blocked waiting for lock from 50ms to 250ms -->
+  <rect x="268" y="200" width="384" height="20" rx="4" class="blocked-bar"/>
+  <rect x="268" y="200" width="384" height="20" rx="4" class="blocked-stroke" stroke-width="1.5" fill="none"/>
+  <text x="460" y="214" text-anchor="middle" class="small blocked">blocked — waiting for lock</text>
+
+  <!-- Thread B: acquires lock, null check false, returns instance (~250ms to ~260ms) -->
+  <rect x="652" y="200" width="20" height="20" rx="4" class="thread-b-bar"/>
+  <rect x="652" y="200" width="20" height="20" rx="4" class="thread-b-stroke" stroke-width="1.5" fill="none"/>
+  <circle cx="672" cy="210" r="5" class="success"/>
+  <text x="720" y="248" text-anchor="middle" class="small success">returns Thread A's instance</text>
+
+  <!-- Safe zone highlight -->
+  <rect x="640" y="60" width="140" height="200" rx="4" class="safe-zone"/>
+  <rect x="640" y="60" width="140" height="200" rx="4" class="safe-zone-stroke" stroke-width="1" stroke-dasharray="4,3" fill="none"/>
+
+  <!-- Safe annotation -->
+  <text x="710" y="290" text-anchor="middle" class="small success" font-weight="bold">Data preserved!</text>
+</svg>
