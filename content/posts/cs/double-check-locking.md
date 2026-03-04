@@ -4,6 +4,8 @@ draft = false
 title = "Double Check Locking for Thread-Safe Singleton Initialization"
 +++
 
+## Naive Singleton Initialization
+
 Consider a scenario where multiple threads rely on a common singleton with non-deterministic invocation order. The naive approach for creating singletons looks like this:
 
 ```java
@@ -34,6 +36,8 @@ class Utility {
 }
 ```
 
+## Issues in Concurrent Programs 
+
 Let's assume:
 
 1. `initialize()` takes ~250ms to run.
@@ -44,6 +48,8 @@ When Thread A calls `getInstance()`, the check for `instance == null` will be tr
 Imagine that at 275ms into the program's execution, thread A modifies the `utilityMap` by adding a new key/value pair into it. 300ms into the program's execution, thread B's call to `initialize()` will finish, and the static singleton field `instance` will be overwritten. Critically, the `utilityMap` modifications done by thread A just 25ms before are lost forever.
 
 {{< inline-svg src="post-photos/double-check-locking-race-condition.svg" >}}
+
+## Double Checked Locking Initialization
 
 We can solve this problem using the **double-checked locking** design pattern:
 
@@ -99,3 +105,7 @@ Without volatile, the JVM can reorder 2 and 3. Thread A could assign a reference
 Volatile guarantees that by the time a reference is assigned and visible to other threads, all the fields have been initialized.
 
 {{< inline-svg src="post-photos/double-check-locking-solved.svg" >}}
+
+## Recommended Readings
+1. [Double-Checked Locking - An Optimization Pattern for Efficiently Initializing and Accessing Thread-safe Objects](https://www.dre.vanderbilt.edu/~schmidt/PDF/DC-Locking.pdf): This paper introduced the double-check locking pattern.
+2. [The "Double-Checked Locking is Broken" Declaration](https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html): Highlights issues with the original paper as well as how those were fixed in JDK 5 (with the introduction of the `volatile` keyword). 
