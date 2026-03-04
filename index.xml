@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ali Raza</title><link>https://www.aliraza.gg/</link><description>Recent content on Ali Raza</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 03 Jan 2026 09:00:00 +0000</lastBuildDate><atom:link href="https://www.aliraza.gg/index.xml" rel="self" type="application/rss+xml"/><item><title>Retro Gaming on MacOS</title><link>https://www.aliraza.gg/posts/gaming/mac-emulation/</link><pubDate>Sat, 03 Jan 2026 09:00:00 +0000</pubDate><guid>https://www.aliraza.gg/posts/gaming/mac-emulation/</guid><description>&lt;h2 id="setup"&gt;Setup&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ali Raza</title><link>https://www.aliraza.gg/</link><description>Recent content on Ali Raza</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 03 Mar 2026 22:00:00 +0000</lastBuildDate><atom:link href="https://www.aliraza.gg/index.xml" rel="self" type="application/rss+xml"/><item><title>Double Check Locking for Thread-Safe Singleton Initialization</title><link>https://www.aliraza.gg/posts/cs/double-check-locking/</link><pubDate>Tue, 03 Mar 2026 22:00:00 +0000</pubDate><guid>https://www.aliraza.gg/posts/cs/double-check-locking/</guid><description>&lt;p&gt;Consider a scenario where multiple threads rely on a common singleton with non-deterministic invocation order. The naive approach for creating singletons looks like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Utility&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;private&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;static&lt;/span&gt; Utility instance;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;@Getter&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;private&lt;/span&gt; Map&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;String, String&lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; utilityMap;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;private&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Utility&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; utilityMap &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; HashMap&lt;span style="color:#f92672"&gt;&amp;lt;&amp;gt;&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;private&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;static&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;void&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;initialize&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (instance &lt;span style="color:#f92672"&gt;==&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;null&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; instance &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; Utility();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;static&lt;/span&gt; Utility &lt;span style="color:#a6e22e"&gt;getInstance&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (instance &lt;span style="color:#f92672"&gt;==&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;null&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; initialize();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; instance;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Consider the following scenario:&lt;/p&gt;</description></item><item><title>Retro Gaming on MacOS</title><link>https://www.aliraza.gg/posts/gaming/mac-emulation/</link><pubDate>Sat, 03 Jan 2026 09:00:00 +0000</pubDate><guid>https://www.aliraza.gg/posts/gaming/mac-emulation/</guid><description>&lt;h2 id="setup"&gt;Setup&lt;/h2&gt;
 &lt;h4 id="atari-2600-nes-snes-gameboy-n64-and-sega-genesis"&gt;Atari 2600, NES, SNES, Gameboy, N64, and Sega Genesis&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;Download and install &lt;a href="https://openemu.org"&gt;OpenEmu&lt;/a&gt;.&lt;/li&gt;
