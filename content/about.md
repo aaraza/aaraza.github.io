@@ -12,3 +12,4 @@ I'm interested in:
 - [Films and Shows]({{< relref "posts/cinema/_index.md" >}})
 - [Boxing]({{< relref "posts/boxing/_index.md" >}})
 - [Gaming]({{< relref "posts/gaming/_index.md" >}})
+- [Literature]({{< relref "posts/literature/_index.md" >}})
