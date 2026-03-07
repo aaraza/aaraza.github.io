@@ -1,31 +1,16 @@
-# Personal Blog
+# Personal Blog — Hugo site with heavily modified Hyde theme
 
-## Project Overview
+## Key Conventions
+- Subsections live in `content/posts/` directories, each with an `_index.md`.
+- The `weight` front matter in `_index.md` controls homepage display order. Weights are assigned alphabetically. When adding a new subsection, adjust weights to maintain alphabetical order.
+- Each subsection may have a `recommended.md` displayed on its index page via `themes/hyde/layouts/_default/list.html`.
+- The site deploys from the `generated` branch (not `main`).
 
-This project is a personal blog powered by Hugo. The blog serves as a centralized digital home for me to broadcast my thoughts to the world. I intend on writing about:
-    
-- Computer Science
-- Cinema
-- Sports
-- Gaming
-- And many other personal interests as thoughts worth publishing pop up
-
-## Tech Stack and Tooling
-- [Hugo](https://gohugo.io/): A static site generator. It allows me to create new blog posts using standard markdown.
-- [Hyde Theme](https://github.com/spf13/2hyde): I used this theme to base the design of my application but have modified it quite a bit.
-- [GitHub Pages](https://github.com/aaraza/aaraza.github.io): The blog is hosted on GitHub pages.
-- [Namecheap](https://www.namecheap.com): The custom domain, https://www.aliraza.gg, is a namecheap domain. 
-
-## CI/CD
-Defined in `.github/workflows/deploy.yml`. On every push to `main`, GitHub Actions:
-1. Checks out the repo with full history (`fetch-depth: 0`) so Hugo can access git metadata.
-2. Cleans the `public/` directory for a fresh build.
-3. Installs Hugo and builds the site with `--minify`.
-4. Deploys the built output to the `generated` branch via `peaceiris/actions-gh-pages`. GitHub Pages serves the site from this branch.
-
-## Organization and Blog Structure
-The home page, configured by the `content/about.md` file has a one-line greeting and a link to all the subsections of the website.
-
-The subsections are organized as directories in the `content/posts/` directory. 
-
-Each subsection may have a unique type of post `recommended.md`. This content is displayed in indexs page of the subsection as configured in `themes/hyde/layouts/_default/list.html` 
+## Git Workflow
+- Always create a feature branch from `main` for changes. Never commit directly to `main`.
+- Do not commit until explicitly asked. When asked to commit:
+  1. Run `hugo server` in the background and fetch the relevant pages to verify changes render correctly.
+  2. Make logically separated commits. Never mix infrastructure changes (config, docs, theme) with content. Separate posts should be separate commits.
+  3. Display what the commits you made are along with the files modified in each commit and then ask me whether I want to push the branch to GitHub.
+  4. Create a PR targeting `main`.
+  5. Ask whether the PR has been deployed. Once confirmed, check out `main`, pull latest, and delete the feature branch locally.
