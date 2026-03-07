@@ -14,7 +14,7 @@ A personal blog powered by Hugo, serving as a centralized digital home to broadc
 ## Blog Structure
 
 - **Home page** — Configured by `content/about.md`, contains a greeting and links to all subsections
-- **Subsections** — Organized as directories under `content/posts/`
+- **Subsections** — Organized as directories under `content/posts/`. Each has an `_index.md` with a `weight` front matter field controlling display order on the homepage. Weights are assigned alphabetically (Boxing=1, Cinema=2, etc.)
 - **Recommended posts** — Each subsection can have a `recommended.md` displayed on its index page via `themes/hyde/layouts/_default/list.html`
 
 ## Development
