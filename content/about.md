@@ -1,15 +1,6 @@
 +++
 date = '2025-11-19T07:10:00-00:00'
 draft = false
-title = "Hello! I'm Ali."
+title = "Reveries of an Inquisitive Mind"
 type = "about"
 +++
-
-<!-- original date = '2024-12-13T02:15:00-06:00' -->
-
-I'm interested in:
-- [Computer Science]({{< relref "posts/cs/_index.md" >}})
-- [Films and Shows]({{< relref "posts/cinema/_index.md" >}})
-- [Boxing]({{< relref "posts/boxing/_index.md" >}})
-- [Gaming]({{< relref "posts/gaming/_index.md" >}})
-- [Literature]({{< relref "posts/literature/_index.md" >}})
