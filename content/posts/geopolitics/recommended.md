@@ -4,4 +4,4 @@ draft = false
 title = "recommended"
 +++
 
-- [Rivals in the Service of Empire: Abu Dhabi, Qatar and the United States](https://internationalviewpoint.org/Rivals-in-the-Service-of-Empire-Abu-Dhabi-Qatar-and-the-United-States): September 2024, by Gilber Achcar
+- [Rivals in the Service of Empire: Abu Dhabi, Qatar and the United States](https://internationalviewpoint.org/Rivals-in-the-Service-of-Empire-Abu-Dhabi-Qatar-and-the-United-States): September 2024, by Gilbert Achcar
