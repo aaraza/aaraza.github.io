@@ -1,12 +1,7 @@
 {{ define "main" -}}
-<div class="post">
-  <h1 style="text-align:center;">{{ .Title }}</h1>
-  <hr>
+<article class="post">
+  <h1>{{ .Title }}</h1>
+  {{ with .Date }}<time class="post-date" datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time>{{ end }}
   {{ .Content }}
-</div>
-
-{{ if .Site.Config.Services.Disqus.Shortname -}}
-<h2>Comments</h2>
-{{ template "_internal/disqus.html" . }}
-{{- end }}
+</article>
 {{- end }}

@@ -1,10 +1,14 @@
 {{ define "main" -}}
-  <div class="posts">
-    {{ with .Site.GetPage "/about.md" -}}
-      <article class="post">
-        <h1>{{ .Title }}</h1>
-        {{ .Content }}
-      </article>
+  {{ with .Site.GetPage "/about.md" -}}
+    <h1>{{ .Title }}</h1>
+  {{- end }}
+  {{ with .Site.GetPage "/posts" -}}
+    <ul class="section-list">
+    {{ range .Sections.ByWeight -}}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
     {{- end }}
-  </div>
+    </ul>
+  {{- end }}
 {{- end }}
