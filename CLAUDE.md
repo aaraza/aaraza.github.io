@@ -5,6 +5,7 @@
 - The `weight` front matter in `_index.md` controls homepage display order. Weights are assigned alphabetically. When adding a new subsection, adjust weights to maintain alphabetical order.
 - Each subsection may have a `recommended.md` displayed on its index page via `themes/hyde/layouts/_default/list.html`.
 - The site deploys from the `generated` branch (not `main`).
+- When new posts or recommended content are added, check for spelling and grammar errors before committing.
 
 ## Git Workflow
 - Always create a feature branch from `main` for changes. Never commit directly to `main`.
