@@ -91,13 +91,13 @@ The key changes are:
 
 The first null check outside the synchronized block is in place because once the singleton is initialized, all subsequent calls to initialize will return immediately without touching the lock.
 
-The synchronized keyword acquires a lock on the class object, only allowing one thread to enter the block at a time. The other threads need to wait till the first thread's execution of the synchronized block is complete.
+The synchronized keyword acquires a lock on the class object, only allowing one thread to enter the block at a time. The other threads need to wait until the first thread's execution of the synchronized block is complete.
 
-Once the first thread has completed its execution of the synchronized block, the second null check shall return false, preventing any other threads that are waiting for the class' lock to be released from re-initializing the class.
+Once the first thread has completed its execution of the synchronized block, the second null check shall return false, preventing any other threads that are waiting for the class's lock to be released from re-initializing the class.
 
 However, this pattern does not work as is without the volatile keyword because when a new instance of an object is created, the JVM:
 1. Allocates memory for the object
-2. Populates the class' fields
+2. Populates the class's fields
 3. Assigns a reference to instance
 
 Without volatile, the JVM can reorder 2 and 3. Thread A could assign a reference before the constructor finishes. Thread B sees the instance is not null and skips the synchronized block. Subsequently, it could read from the map that hasn't yet been initialized.
