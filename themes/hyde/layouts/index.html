@@ -1,6 +1,6 @@
 {{ define "main" -}}
   {{ with .Site.GetPage "/about.md" -}}
-    <h1>{{ .Title }}</h1>
+    <h2>{{ .Title }}</h2>
   {{- end }}
   {{ with .Site.GetPage "/posts" -}}
     <ul class="section-list">

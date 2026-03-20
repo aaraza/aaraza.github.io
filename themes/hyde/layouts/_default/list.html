@@ -1,5 +1,5 @@
 {{ define "main" -}}
-<h1>{{ .Title }}</h1>
+<h2>{{ .Title }}</h2>
 <ul class="post-list">
 {{ range where .Data.Pages "Title" "ne" "recommended" -}}
   <li>
