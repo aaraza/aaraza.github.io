@@ -227,10 +227,11 @@ html {
 }
 
 .post-list-meta {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   gap: 0.5rem;
-  white-space: nowrap;
+  margin-top: 0.15rem;
 }
 
 .post-list-section {
@@ -244,7 +245,6 @@ html {
   color: var(--text-secondary);
   font-size: 0.8rem;
   font-style: italic;
-  margin-left: 0.5rem;
 }
 
 .post-list-summary {
