@@ -8,10 +8,10 @@
     {{ range . -}}
       <li>
         <a href="{{ .Permalink }}">{{ .Title }}</a>
-        <span class="post-list-meta">
+        <div class="post-list-meta">
           {{ with .Parent }}<span class="post-list-section">{{ .Title }}</span>{{ end }}
           {{ if not .Date.IsZero }}<time class="post-list-date">{{ .Date.Format "Jan 2, 2006" }}</time>{{ end }}
-        </span>
+        </div>
       </li>
     {{- end }}
     </ul>
