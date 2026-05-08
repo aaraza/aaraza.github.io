@@ -31,5 +31,21 @@
   {{ end -}}
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <script>
+    (function() {
+      try {
+        var stored = localStorage.getItem('sidebar-open');
+        var open;
+        if (stored === '1') open = true;
+        else if (stored === '0') open = false;
+        else open = window.matchMedia('(min-width: 64em)').matches;
+        document.documentElement.classList.add(open ? 'sidebar-open' : 'sidebar-closed');
+      } catch (e) {
+        document.documentElement.classList.add('sidebar-open');
+      }
+    })();
+  </script>
+
   {{ partial "hook_head_end.html" . }}
 </head>

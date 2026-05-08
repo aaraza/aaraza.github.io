@@ -1,7 +1,14 @@
 {{ define "main" -}}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ "/" | relURL }}">Home</a>
+  {{ with .Parent }}<span aria-hidden="true"> › </span><a href="{{ .Permalink }}">{{ .Title }}</a>{{ end }}
+</nav>
 <article class="post">
   <h1>{{ .Title }}</h1>
   {{ with .Date }}<time class="post-date" datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time>{{ end }}
   {{ .Content }}
+  {{ with .Parent }}
+    <p class="post-back"><a href="{{ .Permalink }}">← More in {{ .Title }}</a></p>
+  {{ end }}
 </article>
 {{- end }}
