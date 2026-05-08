@@ -1,12 +1,17 @@
 {{ define "main" -}}
-  {{ with .Site.GetPage "/about.md" -}}
-    <h2>{{ .Title }}</h2>
-  {{- end }}
-  {{ with .Site.GetPage "/posts" -}}
-    <ul class="section-list">
-    {{ range .Sections.ByWeight -}}
+  {{ $posts := where .Site.RegularPages "Section" "posts" }}
+  {{ $posts = where $posts "Title" "ne" "recommended" }}
+  {{ $recent := first 5 $posts }}
+  {{ with $recent -}}
+    <h2>Recent</h2>
+    <ul class="post-list">
+    {{ range . -}}
       <li>
         <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <span class="post-list-meta">
+          {{ with .Parent }}<span class="post-list-section">{{ .Title }}</span>{{ end }}
+          {{ if not .Date.IsZero }}<time class="post-list-date">{{ .Date.Format "Jan 2, 2006" }}</time>{{ end }}
+        </span>
       </li>
     {{- end }}
     </ul>

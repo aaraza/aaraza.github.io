@@ -1,5 +1,8 @@
 <header class="site-header">
   <div class="header-inner">
     <a href="{{ "/" | absURL }}" class="site-title">{{ .Site.Title }}</a>
+    <nav class="site-nav">
+      <a href="{{ "index.xml" | absURL }}" class="site-nav-link" aria-label="RSS feed" title="RSS feed">RSS</a>
+    </nav>
   </div>
 </header>

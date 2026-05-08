@@ -11,7 +11,7 @@ html {
 /* Header */
 .site-header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  padding: 1.25rem 0;
+  padding: 0.75rem 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,6 +29,65 @@ html {
   align-items: center;
 }
 
+/* Reserve room on small viewports so the floating hamburger doesn't overlap the title */
+@media (max-width: 63.99em) {
+  .header-inner {
+    padding-left: 3.25rem;
+  }
+}
+
+/* Hamburger toggle — fixed, visually attached to the sidebar */
+.sidebar-toggle {
+  position: fixed;
+  top: 0.85rem;
+  left: 1rem;
+  z-index: 100;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1.4rem;
+  height: 1rem;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  transition: top 0.2s ease, left 0.2s ease;
+}
+
+@media (min-width: 64em) {
+  /* When sidebar is open on desktop, anchor the hamburger to the right edge
+     of the sidebar, vertically aligned with the "Home" row. */
+  .sidebar-toggle {
+    top: 2.15rem;
+    left: calc(14rem - 1.5rem - 1.4rem);
+  }
+
+  .sidebar-closed .sidebar-toggle {
+    top: 0.85rem;
+    left: 1rem;
+  }
+}
+
+.sidebar-toggle-bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text);
+  border-radius: 1px;
+}
+
+.sidebar-toggle:hover .sidebar-toggle-bar {
+  background-color: var(--text-secondary);
+}
+
+.sidebar-toggle:focus-visible {
+  outline: 2px solid var(--text-secondary);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
 .site-title {
   font-size: 1.1rem;
   font-weight: 700;
@@ -40,6 +99,24 @@ html {
 .site-title:hover {
   text-decoration: none;
   opacity: 0.7;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.site-nav-link {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.site-nav-link:hover {
+  color: var(--text);
+  text-decoration: none;
 }
 
 /* Content */
@@ -56,23 +133,79 @@ html {
   }
 }
 
-/* Section list (home page) */
-.section-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.section-list li {
-  padding: 0.5rem 0;
+/* Topics sidebar */
+.topics-sidebar {
+  overflow: hidden;
   border-bottom: 1px solid var(--border);
+  max-height: 30rem;
+  padding: 1rem 1.5rem 1.25rem;
+  transition: max-height 0.2s ease, padding 0.2s ease, border-color 0.2s ease;
 }
 
-.section-list li:last-child {
-  border-bottom: none;
+.sidebar-closed .topics-sidebar {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom-color: transparent;
 }
 
-.section-list a {
+.topics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+}
+
+.topics-list a {
   text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.topics-list a:hover {
+  color: var(--text);
+}
+
+.topics-list li.is-active a {
+  color: var(--text);
+  font-weight: 600;
+}
+
+@media (min-width: 64em) {
+  body {
+    padding-left: 14rem;
+    transition: padding-left 0.2s ease;
+  }
+
+  .sidebar-closed body {
+    padding-left: 0;
+  }
+
+  .topics-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 14rem;
+    height: 100vh;
+    max-height: none;
+    padding: 2rem 1.5rem;
+    border-right: 1px solid var(--border);
+    border-bottom: none;
+    overflow-y: auto;
+    transition: transform 0.2s ease;
+  }
+
+  .sidebar-closed .topics-sidebar {
+    transform: translateX(-100%);
+    padding: 2rem 1.5rem;
+  }
+
+  .topics-list {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
 }
 
 /* Post list */
@@ -82,8 +215,29 @@ html {
 }
 
 .post-list li {
-  padding: 0.5rem 0;
+  padding: 0.6rem 0;
   border-bottom: 1px solid var(--border);
+}
+
+.post-list-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.post-list-meta {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.post-list-section {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .post-list-date {
@@ -91,6 +245,14 @@ html {
   font-size: 0.8rem;
   font-style: italic;
   margin-left: 0.5rem;
+}
+
+.post-list-summary {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .post-list li:last-child {
@@ -111,15 +273,71 @@ html {
 /* Recommended section */
 .recommended {
   margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.015);
+}
+
+@media (prefers-color-scheme: dark) {
+  .recommended {
+    background-color: rgba(255, 255, 255, 0.025);
+  }
+}
+
+.recommended h3 {
+  margin-top: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
 }
 
 .recommended ul {
   list-style: none;
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 .recommended li {
   padding: 0.5rem 0;
+}
+
+.recommended p:last-child {
+  margin-bottom: 0;
+}
+
+/* Breadcrumb (single page) */
+.breadcrumb {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.breadcrumb a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--text);
+}
+
+/* Back link at end of post */
+.post-back {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.post-back a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.post-back a:hover {
+  color: var(--text);
 }

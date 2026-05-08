@@ -1,0 +1,21 @@
+<button class="sidebar-toggle" type="button" aria-label="Toggle navigation" aria-controls="topics-nav" aria-expanded="true">
+  <span class="sidebar-toggle-bar"></span>
+  <span class="sidebar-toggle-bar"></span>
+  <span class="sidebar-toggle-bar"></span>
+</button>
+<aside class="topics-sidebar" id="topics-nav" aria-label="Site navigation">
+  {{ $current := .RelPermalink }}
+  {{ $isHome := eq .Kind "home" }}
+  <ul class="topics-list">
+    <li{{ if $isHome }} class="is-active"{{ end }}>
+      <a href="{{ "/" | relURL }}">Home</a>
+    </li>
+    {{ with .Site.GetPage "/posts" -}}
+      {{ range .Sections.ByWeight -}}
+        <li{{ if hasPrefix $current .RelPermalink }} class="is-active"{{ end }}>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+      {{- end }}
+    {{- end }}
+  </ul>
+</aside>

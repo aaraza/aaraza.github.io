@@ -1,9 +1,27 @@
 {{ partial "head.html" . }}
   <body>
   {{ partial "sidebar.html" . }}
+  {{ partial "topics.html" . }}
     <main class="content container">
     {{ block "main" . -}}{{- end }}
     </main>
+
+    <script>
+      (function() {
+        var toggle = document.querySelector('.sidebar-toggle');
+        if (!toggle) return;
+        var html = document.documentElement;
+        function isOpen() { return html.classList.contains('sidebar-open'); }
+        function setOpen(open) {
+          html.classList.toggle('sidebar-open', open);
+          html.classList.toggle('sidebar-closed', !open);
+          toggle.setAttribute('aria-expanded', String(open));
+          try { localStorage.setItem('sidebar-open', open ? '1' : '0'); } catch (e) {}
+        }
+        toggle.setAttribute('aria-expanded', String(isOpen()));
+        toggle.addEventListener('click', function() { setOpen(!isOpen()); });
+      })();
+    </script>
 
     {{ if ne hugo.Environment "development" }}
       {{ template "_internal/google_analytics.html" . }}
